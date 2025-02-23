@@ -1,8 +1,15 @@
 import Home from "./routes/home";
+import Layout from "./components/layout";
 
 export const routers = [
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+    ],
   },
 ];

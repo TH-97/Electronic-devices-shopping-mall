@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.searchBox {
+  height: 30px;
+  width: 300px;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 20px;
+  border: 1px solid #a9b5df;
+}
+
+.searchText {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0px;
+  float: left;
+  color: #797979;
+  font-size: 16px;
+  line-height: 30px;
+  width: 200px;
+}
+
+.searchBtn {
+  color: #a9b5df;
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  float: right;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
