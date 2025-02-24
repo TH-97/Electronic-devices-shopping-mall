@@ -1,3 +1,4 @@
+import "../styles/global.css";
 import { Link, Outlet } from "react-router-dom";
 import Magnifier from "../assets/magnifier.svg";
 import styles from "../styles/layout.module.css";
