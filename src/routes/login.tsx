@@ -1,39 +1,51 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/login.module.css";
+import { User } from "../model/user";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setLoading] = useState(false);
-  const [email, setEmail] = useState("");
+  const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       target: { name, value },
     } = e;
-    if (name === "email") {
-      setEmail(value);
+    if (name === "id") {
+      setId(value);
     } else if (name === "password") {
       setPassword(value);
     }
   };
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (isLoading || email === "" || password === "") return;
+
+  const fetchUsers = async () => {
     try {
-      setLoading(true);
-      /*
-      db접근 및 로그인
-      */
+      const response = await fetch("http://localhost:3000/users");
+      console.log("Response status:", response.status);
+      if (!response.ok) {
+        throw new Error("Failed to fetch users");
+      }
+      const data = await response.json();
+      setUsers(data);
+      console.log("Fetched users data:", data);
+      setLoading(false);
       navigate("/");
     } catch (e) {
-      if (e) {
-        setError("error");
-      }
-    } finally {
+      console.log(e);
+      setError("아이디와 비밀번호를 확인해주십시오");
       setLoading(false);
     }
+  };
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isLoading || id === "" || password === "") return;
+    setLoading(true);
+    await fetchUsers();
   };
   return (
     <div className={styles.body}>
@@ -43,10 +55,10 @@ export default function Login() {
           <input
             className={styles.loginInput}
             onChange={onChange}
-            name="email"
-            value={email}
-            placeholder="email"
-            type="email"
+            name="id"
+            value={id}
+            placeholder="id"
+            type="id"
             required
           />
           <input
