@@ -1,10 +1,13 @@
 import "../styles/global.css";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Magnifier from "../assets/magnifier.svg";
 import styles from "../styles/layout.module.css";
 import NavigationBar from "./navigationbar";
+import LoggedIn from "./loggedIn";
+import LoggedOut from "./loggedOut";
 
 export default function Layout() {
+  const isLoggedIn = document.cookie.includes("jwt=");
   return (
     <div>
       <div className={styles.header}>
@@ -19,7 +22,7 @@ export default function Layout() {
             <img src={Magnifier} alt="검색하기" />
           </button>
         </form>
-        <Link to="/login">로그인</Link>
+        {isLoggedIn ? <LoggedIn /> : <LoggedOut />}
       </div>
       <NavigationBar />
       <Outlet />

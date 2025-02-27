@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.logOut {
+  cursor: pointer;
+}
+.logOutBtn {
+  display: none;
+}

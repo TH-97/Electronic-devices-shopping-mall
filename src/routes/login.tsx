@@ -39,6 +39,7 @@ export default function Login() {
       console.log(document.cookie);
 
       navigate("/");
+      window.location.reload();
     } catch (e) {
       setError(e as string);
     } finally {
