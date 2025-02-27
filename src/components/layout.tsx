@@ -2,6 +2,7 @@ import "../styles/global.css";
 import { Link, Outlet } from "react-router-dom";
 import Magnifier from "../assets/magnifier.svg";
 import styles from "../styles/layout.module.css";
+import NavigationBar from "./navigationbar";
 
 export default function Layout() {
   return (
@@ -20,6 +21,7 @@ export default function Layout() {
         </form>
         <Link to="/">로그인</Link>
       </div>
+      <NavigationBar />
       <Outlet />
     </div>
   );

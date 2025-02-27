@@ -1,0 +1,15 @@
+.dropdown {
+  position: absolute;
+  top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
