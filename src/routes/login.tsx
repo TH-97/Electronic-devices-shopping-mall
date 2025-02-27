@@ -5,7 +5,6 @@ import { User } from "../model/user";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setLoading] = useState(false);
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
@@ -25,18 +24,24 @@ export default function Login() {
   const fetchUsers = async () => {
     try {
       const response = await fetch("http://localhost:3000/users");
-      console.log("Response status:", response.status);
-      if (!response.ok) {
-        throw new Error("Failed to fetch users");
+      const data: User[] = await response.json();
+      const checkUser = data.find(
+        (user) => user.id === id && user.password === password
+      );
+      if (!checkUser) {
+        throw "아이디 또는 비밀번호를 확인하세요";
       }
-      const data = await response.json();
-      setUsers(data);
-      console.log("Fetched users data:", data);
+      console.log(data);
       setLoading(false);
+
+      //모의 토큰 생성
+      document.cookie = `jwt=${id}; path=/; max-age=${60 * 60 * 24}`;
+      console.log(document.cookie);
+
       navigate("/");
     } catch (e) {
-      console.log(e);
-      setError("아이디와 비밀번호를 확인해주십시오");
+      setError(e as string);
+    } finally {
       setLoading(false);
     }
   };
