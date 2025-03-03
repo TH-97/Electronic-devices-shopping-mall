@@ -31,12 +31,10 @@ export default function Login() {
       if (!checkUser) {
         throw "아이디 또는 비밀번호를 확인하세요";
       }
-      console.log(data);
       setLoading(false);
 
       //모의 토큰 생성
       document.cookie = `jwt=${id}; path=/; max-age=${60 * 60 * 24}`;
-      console.log(document.cookie);
 
       navigate("/");
       window.location.reload();

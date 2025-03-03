@@ -6,5 +6,25 @@
       "password": "test",
       "name": "Test User"
     }
+  ],
+  "product": [
+    {
+      "catagory": "apple",
+      "name": "아이폰",
+      "price": "1,500,000",
+      "imgUrl": "/src/assets/iphone.png"
+    },
+    {
+      "catagory": "samsong",
+      "name": "삼성 노트북",
+      "price": "1,500,000",
+      "imgUrl": "/src/assets/samnote.jpg"
+    },
+    {
+      "catagory": "samsong",
+      "name": "갤럭시 21",
+      "price": "1,500,000",
+      "imgUrl": "/src/assets/samphone.jpg"
+    }
   ]
 }
