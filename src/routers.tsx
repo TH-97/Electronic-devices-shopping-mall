@@ -3,6 +3,7 @@ import Layout from "./components/layout";
 import Login from "./routes/login";
 import AdminPage from "./routes/admin-page";
 import AdminLayout from "./components/admin/admin-layout";
+import ParcelTracking from "./components/parcel-tracking";
 
 export const routers = [
   {
@@ -16,6 +17,10 @@ export const routers = [
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/parcel-tracking",
+        element: <ParcelTracking />,
       },
     ],
   },

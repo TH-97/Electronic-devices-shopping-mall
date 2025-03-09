@@ -29,3 +29,7 @@ dist-ssr
 .DS_Store
 .AppleDouble
 .LSOverride
+
+### API KEY ###
+.env
+.env.local

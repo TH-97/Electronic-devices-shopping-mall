@@ -1,5 +1,5 @@
 import "../styles/global.css";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Magnifier from "../assets/magnifier.svg";
 import styles from "../styles/layout.module.css";
 import NavigationBar from "./navigationbar";
@@ -11,7 +11,9 @@ export default function Layout() {
   return (
     <div>
       <div className={styles.header}>
-        <h1>logo</h1>
+        <h1>
+          <Link to="/">logo</Link>
+        </h1>
         <form className={styles.searchBox}>
           <input
             className={styles.searchText}
