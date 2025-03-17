@@ -8,7 +8,7 @@ export function BaseProductList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = ProductApi;
+      const response = await ProductApi;
       const data: Product[] = await response.json();
       setProducts(data); // 상태 업데이트
     };
@@ -20,7 +20,6 @@ export function BaseProductList() {
       {products.map((product, index) => (
         <ProductCard key={index} product={product} />
       ))}
-      ;
     </div>
   );
 }

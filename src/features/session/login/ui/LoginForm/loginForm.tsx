@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./loginForm.module.css";
 import { useNavigate } from "react-router-dom";
-import { User } from "../../model/login";
+import { User } from "../../model/user";
 import { LoginApi } from "../../api/loginApi";
 export function LoginForm() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export function LoginForm() {
 
   const fetchUsers = async () => {
     try {
-      const response = LoginApi;
+      const response = await LoginApi;
       const data: User[] = await response.json();
       const checkUser = data.find(
         (user) => user.id === id && user.password === password

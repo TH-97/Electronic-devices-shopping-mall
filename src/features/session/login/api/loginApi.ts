@@ -1,1 +1,1 @@
-export const LoginApi = await fetch("http://localhost:3000/users");
+export const LoginApi = fetch("http://localhost:3000/users");
