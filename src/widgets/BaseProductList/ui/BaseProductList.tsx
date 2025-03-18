@@ -1,20 +1,16 @@
 import styles from "./BaseProductList.module.css";
-import { ProductCard, type Product } from "../../../entities";
-import { useEffect, useState } from "react";
-import { ProductApi } from "../api/productApi";
-
+import { ProductCard, useProductStore } from "../../../entities";
+import { useEffect } from "react";
 export function BaseProductList() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { products, loadProducts, resetProducts } = useProductStore();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await ProductApi;
-      const data: Product[] = await response.json();
-      setProducts(data); // 상태 업데이트
+    loadProducts();
+    return () => {
+      resetProducts(); // 다른 페이지 갔다가 다시 올 때 초기화
     };
-
-    fetchData();
   }, []);
+
   return (
     <div className={styles.wrapper}>
       {products.map((product, index) => (
