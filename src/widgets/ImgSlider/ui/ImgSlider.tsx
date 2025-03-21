@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./ImgSlider.module.css";
-import chevronLeftIcon from "../../assets/chevron_left_icon.svg";
-import chevronRightIcon from "../../assets/chevron_right_arrow_icon.svg";
+import chevronLeftIcon from "../../../assets/chevron_left_icon.svg";
+import chevronRightIcon from "../../../assets/chevron_right_arrow_icon.svg";
 
 export function ImgSlider() {
   const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
