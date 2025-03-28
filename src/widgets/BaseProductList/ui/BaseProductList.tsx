@@ -12,10 +12,13 @@ export function BaseProductList() {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
-      {products.map((product, index) => (
-        <ProductCard key={index} product={product} />
-      ))}
+    <div>
+      <p className={styles.title}>전제 상품</p>
+      <div className={styles.wrapper}>
+        {products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
+      </div>
     </div>
   );
 }
