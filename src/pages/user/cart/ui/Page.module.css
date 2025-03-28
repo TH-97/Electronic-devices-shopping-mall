@@ -1,0 +1,18 @@
+.wrapper {
+  box-sizing: border-box;
+  margin: 20px 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cart-wrapper {
+  display: flex;
+}
+.cart-list {
+  width: 600px;
+}
+.cart-summary {
+  width: 300px;
+}

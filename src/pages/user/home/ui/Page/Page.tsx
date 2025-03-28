@@ -1,4 +1,4 @@
-import { BaseProductList } from "../../../../../widgets/BaseProductList";
+import { AllProductList } from "../../../../../widgets/AllProductList";
 import { ImgSlider } from "../../../../../widgets/ImgSlider";
 import { ShoppingBenefits } from "../../../../../widgets/ShoppingBenefits";
 import styles from "./Page.module.css";
@@ -8,7 +8,7 @@ export function Home() {
     <div className={styles.wrapper}>
       <ImgSlider />
       <ShoppingBenefits />
-      <BaseProductList />
+      <AllProductList />
     </div>
   );
 }

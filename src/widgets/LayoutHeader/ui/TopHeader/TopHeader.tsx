@@ -4,6 +4,7 @@ import { LoggedOutMenu } from "../LoggedOutMenu/LoggedOutMenu";
 import styles from "./TopHeader.module.css";
 
 export function TopHeader() {
+  //로그인 기능 구현시 변경 예정
   const [isLoggedIn] = useState(false);
   return (
     <div className={styles.wrapper}>

@@ -4,26 +4,17 @@ import { fetchProducts } from "../api/productApi";
 
 interface ProductState {
   products: Product[];
-  isLoading: boolean;
-  error: string | null;
-  loadProducts: () => Promise<void>;
-  resetProducts: () => void;
+  loadProducts: () => Promise<void>; // 장바구니 데이터를 불러오는 액션
 }
 
 export const useProductStore = create<ProductState>((set) => ({
   products: [],
-  isLoading: false,
-  error: null,
   loadProducts: async () => {
-    set({ isLoading: true, error: null });
     try {
-      const products = await fetchProducts();
-      set({ products, isLoading: false });
+      const productData = await fetchProducts(); // API 호출
+      set({ products: productData }); // 상태 업데이트
     } catch (error) {
-      const errorMessage =
-        error instanceof Error ? error.message : "Failed to load products";
-      set({ error: errorMessage, isLoading: false });
+      console.error("Failed to load cart:", error);
     }
   },
-  resetProducts: () => set({ products: [] }), // 홈에 다시 올 때 초기화
 }));

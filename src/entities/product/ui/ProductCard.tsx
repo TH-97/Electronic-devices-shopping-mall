@@ -5,36 +5,42 @@ import clockIcon from "../../../assets/clock_watch_icon.svg";
 
 type Props = {
   product: Product;
+  size: "base" | "cart";
 };
 
 export function ProductCard(props: Props) {
-  const { product } = props;
+  const { product, size } = props;
+  const isBase = size === "base";
   return (
-    <div className={styles.wrapper}>
-      <div className={styles["product-img-area"]}>
+    <div className={styles[`${size}-wrapper`]}>
+      <div className={styles[`${size}-product-img-area`]}>
         <img
-          className={styles["product-img"]}
+          className={styles[`${size}-product-img`]}
           src={`${product.imgUrl}`}
           alt=""
         />
       </div>
-      <div className={styles["product-info-area"]}>
-        <div>review</div>
-        <label className={styles["product-category"]}>{product.catagory}</label>
-        <div className={styles["product-name-area"]}>
-          <div className={styles["product-name"]}>{product.name}</div>
+      <div className={styles[`${size}-product-info-area`]}>
+        {isBase && <div>review</div>}
+        <label className={styles[`${size}-product-category`]}>
+          {product.catagory}
+        </label>
+        <div className={styles[`${size}-product-name-area`]}>
+          <div className={styles[`${size}-product-name`]}>{product.name}</div>
         </div>
-        <div className={styles["product-price"]}>{product.price}원</div>
-        <div className={styles["icon-area"]}>
-          <div className={styles["benefits"]}>
-            <img src={truckIcon} alt="" />
-            <span>무료 배송</span>
+        <div className={styles[`${size}-product-price`]}>{product.price}원</div>
+        {isBase && (
+          <div className={styles[`${size}-icon-area`]}>
+            <div className={styles[`${size}-benefits`]}>
+              <img src={truckIcon} alt="" />
+              <span>무료 배송</span>
+            </div>
+            <div className={styles[`${size}-benefits`]}>
+              <img src={clockIcon} alt="" />
+              <span>당일 출고</span>
+            </div>
           </div>
-          <div className={styles["benefits"]}>
-            <img src={clockIcon} alt="" />
-            <span>당일 출고</span>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

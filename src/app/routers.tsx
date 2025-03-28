@@ -4,6 +4,7 @@ import { AdminPage } from "../pages/admin/admin-home";
 import { AdminAsideBar } from "../widgets/AdminAsideBar/ui/AdminAsideBar";
 import { ParcelTrack } from "../pages/user/parcel-track";
 import { LoginPage } from "../pages/user/login";
+import { Cart } from "../pages/user/cart";
 
 export const routers = [
   {
@@ -21,6 +22,10 @@ export const routers = [
       {
         path: "/parcel-tracking",
         element: <ParcelTrack />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

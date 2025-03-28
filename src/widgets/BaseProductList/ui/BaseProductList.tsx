@@ -1,24 +1,16 @@
-import styles from "./BaseProductList.module.css";
-import { ProductCard, useProductStore } from "../../../entities";
-import { useEffect } from "react";
-export function BaseProductList() {
-  const { products, loadProducts, resetProducts } = useProductStore();
-
-  useEffect(() => {
-    loadProducts();
-    return () => {
-      resetProducts(); // 다른 페이지 갔다가 다시 올 때 초기화
-    };
-  }, []);
-
+import { Product, ProductCard } from "../../../entities";
+type Props<T extends Product> = {
+  products: T[];
+  size: "base" | "cart";
+};
+export function BaseProductList<T extends Product>(props: Props<T>) {
+  const { products = [], size } = props;
   return (
-    <div>
-      <p className={styles.title}>전제 상품</p>
-      <div className={styles.wrapper}>
-        {products.map((product, index) => (
-          <ProductCard key={index} product={product} />
-        ))}
-      </div>
-    </div>
+    <>
+      {products.map((product, index) => (
+        //key = {product.id}로 변경 예정
+        <ProductCard key={index} product={product} size={size} />
+      ))}
+    </>
   );
 }
