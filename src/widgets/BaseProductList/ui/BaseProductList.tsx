@@ -1,4 +1,4 @@
-import { Product, ProductCard } from "../../../entities";
+import { Product, ProductCard } from "../../../entities/product";
 type Props<T extends Product> = {
   products: T[];
   size: "base" | "cart";

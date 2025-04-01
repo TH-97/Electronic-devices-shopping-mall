@@ -1,0 +1,22 @@
+.order-small-info {
+  display: flex;
+  padding: 10px 0;
+}
+.order-info-img {
+  width: 44px;
+  height: 44px;
+  background-color: gray;
+  border-radius: 4px;
+}
+.order-info-item {
+  display: flex;
+}
+.order-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 8px;
+}
+.order-product-quantity-and-price {
+  display: flex;
+}

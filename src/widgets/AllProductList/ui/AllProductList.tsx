@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useProductStore } from "../../../entities";
+import { useProductStore } from "../../../entities/product";
 import { BaseProductList } from "../../BaseProductList";
 import styles from "./AllProductList.module.css";
 

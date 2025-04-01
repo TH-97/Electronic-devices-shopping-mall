@@ -5,6 +5,7 @@ import { AdminAsideBar } from "../widgets/AdminAsideBar/ui/AdminAsideBar";
 import { ParcelTrack } from "../pages/user/parcel-track";
 import { LoginPage } from "../pages/user/login";
 import { Cart } from "../pages/user/cart";
+import { MyPage } from "../pages/user/myPage";
 
 export const routers = [
   {
@@ -26,6 +27,10 @@ export const routers = [
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/my-page",
+        element: <MyPage />,
       },
     ],
   },
