@@ -1,0 +1,32 @@
+.product-detail-wrapper {
+  display: flex;
+}
+.product-detail-img {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-detail-img img {
+  width: 500px;
+  height: 560px;
+  border-radius: 8px;
+}
+.product-detail-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 40px;
+}
+.product-detail-category {
+  color: #797979;
+}
+.product-detail-review {
+  display: flex;
+}
+.product-detail-button-area {
+  display: flex;
+}

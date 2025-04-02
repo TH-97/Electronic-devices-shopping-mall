@@ -9,7 +9,6 @@ type Props = {
 export function OrderCard(props: Props) {
   const { orderItem } = props;
   // 총 결제금액 계산
-  // 총 결제금액 계산
   const totalPrice = orderItem.OrderDetails.reduce(
     (total, orderItemDetail) =>
       total +
