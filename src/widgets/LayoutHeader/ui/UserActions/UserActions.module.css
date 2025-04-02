@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+.img {
+  width: 30px;
+}

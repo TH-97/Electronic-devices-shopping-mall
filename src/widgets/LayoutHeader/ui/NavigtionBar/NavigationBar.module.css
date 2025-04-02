@@ -1,0 +1,17 @@
+.nav {
+  display: inline;
+}
+.nav .ul {
+  margin: 0 24px;
+  list-style: none;
+  display: flex;
+}
+
+.li {
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.nav .ul .li:hover {
+  color: #a9b5df;
+}

@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  height: 24px;
+  padding: 0 60px;
+}
+.TopHeader-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
