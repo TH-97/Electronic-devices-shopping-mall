@@ -36,3 +36,10 @@ jobs:
         run: |
           docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/electronic-devices-shopping-mall:v0.14 .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/electronic-devices-shopping-mall:v0.14
+
+      - name: Trigger mall-infra CICD
+        run: |
+          curl -X POST -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+               https://api.github.com/repos/ImHyukJin/mall_infra/dispatches \
+               -d '{"event_type": "trigger-cicd-FrontEnd"}'
