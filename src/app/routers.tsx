@@ -6,6 +6,7 @@ import { ParcelTrack } from "../pages/user/parcel-track";
 import { LoginPage } from "../pages/user/login";
 import { Cart } from "../pages/user/cart";
 import { MyPage } from "../pages/user/myPage";
+import { ProductDetail } from "../widgets/ProductDetail";
 
 export const routers = [
   {
@@ -31,6 +32,10 @@ export const routers = [
       {
         path: "/my-page",
         element: <MyPage />,
+      },
+      {
+        path: "/product/:productId",
+        element: <ProductDetail />,
       },
     ],
   },
