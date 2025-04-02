@@ -34,5 +34,5 @@ jobs:
 
       - name: Build & Push Docker Image
         run: |
-          docker build --platform linux/arm64 -t ${{ secrets.DOCKERHUB_USERNAME }}/electronic-devices-shopping-mall:v0.14 .
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKERHUB_USERNAME }}/electronic-devices-shopping-mall:v0.14 .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/electronic-devices-shopping-mall:v0.14
