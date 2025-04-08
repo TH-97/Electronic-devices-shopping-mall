@@ -7,6 +7,7 @@ import { LoginPage } from "../pages/user/login";
 import { Cart } from "../pages/user/cart";
 import { MyPage } from "../pages/user/myPage";
 import { ProductDetail } from "../widgets/ProductDetail";
+import { CreateAccount } from "../pages/user/create-account";
 
 export const routers = [
   {
@@ -32,6 +33,10 @@ export const routers = [
       {
         path: "/my-page",
         element: <MyPage />,
+      },
+      {
+        path: "/create-account",
+        element: <CreateAccount />,
       },
       {
         path: "/product/:productId",
