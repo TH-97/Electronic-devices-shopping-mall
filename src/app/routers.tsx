@@ -6,8 +6,8 @@ import { ParcelTrack } from "../pages/user/parcel-track";
 import { LoginPage } from "../pages/user/login";
 import { Cart } from "../pages/user/cart";
 import { MyPage } from "../pages/user/myPage";
-import { ProductDetail } from "../widgets/ProductDetail";
 import { CreateAccount } from "../pages/user/create-account";
+import { ProductPage } from "../pages/user/product";
 
 export const routers = [
   {
@@ -40,7 +40,7 @@ export const routers = [
       },
       {
         path: "/product/:productId",
-        element: <ProductDetail />,
+        element: <ProductPage />,
       },
     ],
   },

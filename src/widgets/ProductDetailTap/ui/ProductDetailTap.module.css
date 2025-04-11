@@ -1,0 +1,34 @@
+.tabList-wrapper {
+  margin: 20px;
+}
+.tabList {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 16px;
+}
+
+.tabButton {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.tabButton:hover {
+  color: #000;
+}
+
+.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.tabPanel {
+  padding: 16px 0;
+}

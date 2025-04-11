@@ -21,6 +21,16 @@
   box-sizing: border-box;
   padding: 20px 40px;
 }
+
+.product-detail-overview,
+.product-detail-option {
+  border-bottom: 1px solid #f1f3f6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
 .product-detail-category {
   color: #797979;
 }
@@ -29,4 +39,5 @@
 }
 .product-detail-button-area {
   display: flex;
+  gap: 8px;
 }

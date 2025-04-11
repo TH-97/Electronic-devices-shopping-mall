@@ -1,7 +1,7 @@
-import { Product } from "../model/type";
+import { Product } from "../../model/type";
 import styles from "./ProductCard.module.css";
-import truckIcon from "../../../assets/truck_transport_icon.svg";
-import clockIcon from "../../../assets/clock_watch_icon.svg";
+import truckIcon from "../../../../assets/truck_transport_icon.svg";
+import clockIcon from "../../../../assets/clock_watch_icon.svg";
 
 type Props = {
   product: Product;
