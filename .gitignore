@@ -33,3 +33,6 @@ dist-ssr
 ### API KEY ###
 .env
 .env.local
+### mkcert https ###
+localhost.pem
+localhost-key.pem
