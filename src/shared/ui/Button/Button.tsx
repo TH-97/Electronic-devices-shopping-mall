@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 import { ReactNode } from "react";
 
 type Props = {
-  size?: "s" | "m";
+  size?: "s" | "m" | "max";
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   theme?: "black" | "white";
   children: ReactNode;
@@ -23,7 +23,7 @@ export function Button(props: Props) {
       >
         {children}
       </label>
-      <button id={styles.button} onClick={onClick}></button>
+      <button type="button" id={styles.button} onClick={onClick}></button>
     </>
   );
 }
