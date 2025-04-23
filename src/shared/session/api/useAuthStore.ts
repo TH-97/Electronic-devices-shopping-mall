@@ -16,7 +16,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       if (id === "test" && pw === "1234") {
         console.log("백도어 로그인 성공");
         const fakeToken = "testToken";
-        set({ token: fakeToken });
+        set({ token: fakeToken, isLoggedIn: true });
         localStorage.setItem("token", fakeToken);
         return;
       }

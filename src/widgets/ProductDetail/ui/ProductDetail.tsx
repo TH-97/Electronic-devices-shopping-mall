@@ -2,7 +2,7 @@ import styles from "./ProductDetail.module.css";
 import gray_img from "../../../assets/gray_image.png";
 import { AddToCartButton } from "../../../features/cart";
 import { ProductBuyNow } from "../../../features/product/productBuyNow";
-import { PlusMinusButton } from "../../../shared/ui";
+import { PlusMinusButton } from "../../../shared";
 
 export function ProductDetail() {
   return (

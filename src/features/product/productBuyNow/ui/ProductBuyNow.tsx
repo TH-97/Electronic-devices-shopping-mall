@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Button } from "../../../../shared/ui";
+import { Button } from "../../../../shared";
 
 type Props = {
   size?: "m" | "s";

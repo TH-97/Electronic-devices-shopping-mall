@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../../../../shared/ui";
-import { useAuthStore } from "../../api/useAuthStore";
+import { Button } from "../../../../../shared";
+import { useAuthStore } from "../../../../../shared";
 import { useState } from "react";
 
 type Props = {

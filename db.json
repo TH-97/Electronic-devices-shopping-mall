@@ -4,27 +4,45 @@
       "id": "test",
       "username": "testuser",
       "password": "test",
-      "name": "Test User"
+      "name": "Test User",
+      "cartId": "1"
     }
   ],
   "product": [
     {
+      "productId": "1",
       "catagory": "apple",
       "name": "아이폰",
       "price": "1,500,000",
       "imgUrl": "/src/assets/iphone.png"
     },
     {
+      "productId": "2",
       "catagory": "samsong",
       "name": "삼성 노트북",
       "price": "1,500,000",
       "imgUrl": "/src/assets/samnote.jpg"
     },
     {
+      "productId": "3",
       "catagory": "samsong",
       "name": "갤럭시 21",
       "price": "1,500,000",
       "imgUrl": "/src/assets/samphone.jpg"
     }
-  ]
+  ],
+  "cart": [
+    {
+      "cartId": "1",
+      "productList": [
+        {
+          "productId" : "1",
+          "quantity": 1
+        },
+        {
+          "productId" : "2",
+          "quantity": 2
+        }
+      ]
+    }
 }
