@@ -1,4 +1,18 @@
 .logo {
-  font-weight: 1000;
-  font-size: 36px;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }

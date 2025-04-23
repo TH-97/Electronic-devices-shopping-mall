@@ -7,12 +7,10 @@ import { MidHeader } from "../MidHeader/MidHeader";
 export function LayoutHeader() {
   return (
     <div>
-      <div className={styles["top-header"]}>
+      <header className={styles.header}>
         <TopHeader />
-      </div>
-      <div className={styles["mid-header"]}>
         <MidHeader />
-      </div>
+      </header>
       <Outlet />
     </div>
   );

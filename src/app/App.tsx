@@ -5,7 +5,7 @@ const router = createBrowserRouter(routers);
 
 function App() {
   return (
-    <div style={{ minWidth: "1280px" }}>
+    <div>
       <RouterProvider router={router} />
     </div>
   );

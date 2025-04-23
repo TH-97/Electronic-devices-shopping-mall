@@ -2,13 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
   background-color: black;
-  height: 24px;
-  padding: 0 60px;
+  color: white;
+  height: 2.5rem;
+  padding: 0 5rem;
 }
-.TopHeader-left {
+
+.left span {
+  margin-right: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.right {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
+}
+.topHeaderRight {
+  display: flex;
+  gap: 1rem; /* 로그인, 회원가입 간격 */
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 2rem;
+    height: auto;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }

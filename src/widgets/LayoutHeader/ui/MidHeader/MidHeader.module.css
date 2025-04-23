@@ -1,13 +1,34 @@
 .wrapper {
   display: flex;
-  margin: 0 60px;
-  height: 64px;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 0 5rem;
+  height: 4rem;
 }
-.wrapper2 {
+
+.leftGroup {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 2rem;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 2rem;
+    height: auto;
+  }
+  .leftGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }

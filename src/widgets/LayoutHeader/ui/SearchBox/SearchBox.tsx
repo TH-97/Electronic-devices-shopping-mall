@@ -1,6 +1,6 @@
 import Magnifier from "../../../../assets/magnifier.svg";
 import styles from "./SearchBox.module.css";
-export function SearhBox() {
+export function SearchBox() {
   return (
     <>
       <div className={styles["search-area"]}>

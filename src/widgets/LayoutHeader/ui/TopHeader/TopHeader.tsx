@@ -8,10 +8,10 @@ export function TopHeader() {
   const [isLoggedIn] = useState(false);
   return (
     <div className={styles.wrapper}>
-      <div className={styles["TopHeader-left"]}>
+      <div className={styles.left}>
         <span>고객센터: 1588-1234</span>
       </div>
-      <div className={styles.isLoggedIn}>
+      <div className={styles.right}>
         {isLoggedIn ? <LoggedInMenu /> : <LoggedOutMenu />}
       </div>
     </div>
